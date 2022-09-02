@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+
+  position: relative;
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+/* .container {
+  background-color: hsl(30, 38%, 92%);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+} */
+
+.card {
+  display: flex;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  width: 60rem;
+}
+
+img {
+  width: 33rem;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 3.2rem;
+}
+
+.category {
+  font-size: 1.4rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  color: rgb(153, 153, 153);
+}
+
+.product-title {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.6rem;
+  line-height: 1.05;
+}
+
+.product-description {
+  line-height: 1.6;
+}
+
+.pricing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.4rem;
+  margin: 0.8rem 0;
+}
+
+.selling-price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.regular-price {
+  color: rgb(153, 153, 153);
+  text-decoration: line-through;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: hsl(158, 36%, 33%);
+}
+
+/* .attribution {
+  background-color: royalblue;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+} */
