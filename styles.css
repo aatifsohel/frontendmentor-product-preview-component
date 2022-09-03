@@ -20,22 +20,10 @@ body {
   height: 100vh;
 }
 
-@media (max-width: 375px) {
-}
-
-@media (max-width: 1440px) {
-}
-
-/* .container {
-  background-color: hsl(30, 38%, 92%);
-  display: grid;
-  place-content: center;
-  height: 100vh;
-} */
-
 .card {
-  display: flex;
-  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 1rem;
   justify-content: center;
   align-items: center;
   background-color: hsl(0, 0%, 100%);
@@ -43,15 +31,20 @@ body {
   width: 60rem;
 }
 
-img {
-  width: 33rem;
+.img-desktop {
+  width: 30rem;
+  height: auto;
+}
+
+.img-mobile {
+  display: none;
 }
 
 .product-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.6rem;
+  gap: 1.4rem;
   padding: 3.2rem;
 }
 
@@ -77,13 +70,13 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 2.4rem;
+  gap: 1.6rem;
   margin: 0.8rem 0;
 }
 
 .selling-price {
   font-family: "Fraunces", sans-serif;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: hsl(158, 36%, 37%);
 }
@@ -93,22 +86,57 @@ img {
   text-decoration: line-through;
 }
 
-.btn:link,
-.btn:visited {
-  display: inline-block;
+.btn {
   padding: 1.6rem 3.2rem;
+  font-family: inherit;
+  font-weight: 700;
   color: hsl(0, 0%, 100%);
-  background-color: hsl(158, 36%, 37%);
+  background: hsl(158, 36%, 37%);
+  border: none;
   border-radius: 0.8rem;
-  text-decoration: none;
   cursor: pointer;
-  text-align: center;
   transition: all 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: hsl(158, 36%, 33%);
+  background-color: hsl(158, 36%, 24%);
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 1.8rem;
+  }
+  .card {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .product-details {
+    padding: 2rem;
+  }
+
+  .product-title {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 1440px) {
 }
 
 /* .attribution {
