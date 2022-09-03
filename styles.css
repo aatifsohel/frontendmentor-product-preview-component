@@ -9,43 +9,46 @@ html {
 }
 
 body {
-  color: hsl(228, 12%, 48%);
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
-
-  position: relative;
+  color: hsl(228, 12%, 48%);
   background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  position: relative;
+
   display: grid;
   place-content: center;
-  height: 100vh;
 }
 
 .card {
+  width: 60rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-radius: 1rem;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 100%);
-  overflow: hidden;
-  width: 60rem;
 }
 
-.img-desktop {
+.picture {
   width: 30rem;
   height: auto;
 }
 
-.img-mobile {
-  display: none;
+.img {
+  display: block;
+  width: 100%;
 }
 
 .product-details {
+  padding: 3.2rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.4rem;
-  padding: 3.2rem;
 }
 
 .category {
@@ -56,10 +59,10 @@ body {
 }
 
 .product-title {
-  color: hsl(212, 21%, 14%);
   font-family: "Fraunces", sans-serif;
   font-size: 3.6rem;
   line-height: 1.05;
+  color: hsl(212, 21%, 14%);
 }
 
 .product-description {
@@ -67,11 +70,12 @@ body {
 }
 
 .pricing {
+  margin: 0.8rem 0;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1.6rem;
-  margin: 0.8rem 0;
 }
 
 .selling-price {
@@ -82,18 +86,18 @@ body {
 }
 
 .regular-price {
-  color: rgb(153, 153, 153);
   text-decoration: line-through;
+  color: rgb(153, 153, 153);
 }
 
 .btn {
   padding: 1.6rem 3.2rem;
   font-family: inherit;
   font-weight: 700;
-  color: hsl(0, 0%, 100%);
-  background: hsl(158, 36%, 37%);
   border: none;
   border-radius: 0.8rem;
+  color: hsl(0, 0%, 100%);
+  background: hsl(158, 36%, 37%);
   cursor: pointer;
   transition: all 0.3s;
 
@@ -108,23 +112,28 @@ body {
   background-color: hsl(158, 36%, 24%);
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media (max-width: 375px) {
   .container {
     padding: 1.8rem;
   }
+
+  .picture {
+    display: block;
+    width: 100%;
+  }
+
   .card {
     width: 100%;
     grid-template-columns: 1fr;
-  }
-
-  .img-mobile {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .img-desktop {
-    display: none;
   }
 
   .product-details {
@@ -136,13 +145,11 @@ body {
   }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 768px) {
+  .attribution {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+  }
 }
-
-/* .attribution {
-  background-color: royalblue;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0);
-} */
